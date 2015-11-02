@@ -1,10 +1,10 @@
 //Приложение
 
-;var _app = Class({
+;var App = Class({
 	'extends': Matreshka,
 	constructor: function(){
 		this.feed = {};
-		this.feed.tasks = new _tasks();
+		this.feed.tasks = new Tasks(this);
 
 		this.bindNode('text','[mk-task]');
 		this.bindNode('save','[mk-save]');

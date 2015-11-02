@@ -1,6 +1,6 @@
 // Объект и массив задач
 
-;var _task = Class({
+;var Task = Class({
 	'extends': MK.Object,
 	constructor: function(data,parent){
 		this.parentArray = parent;
@@ -25,9 +25,9 @@
 	}
 });
 
-var _tasks = Class({
+var Tasks = Class({
 	'extends': MK.Array,
-	Model: _task,
+	Model: Task,
 	itemRenderer: '#mk-tpl-task',
 	constructor: function(parent){
 		this.parentApp = parent;
