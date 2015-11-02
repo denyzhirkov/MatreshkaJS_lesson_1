@@ -8,7 +8,7 @@
 
 		this.on('render',function(){
 
-			this.bindNode('sandbox',":sandbox",MK.binders.className('done'));
+			this.bindNode('_sandbox',":sandbox",MK.binders.className('done'));
 			this.bindNode('done',':sandbox [mk-task-done]');
 			this.bindNode('text',':sandbox [mk-task-text]',MK.binders.html());
 			this.bindNode('delete',':sandbox [mk-task-delete]');
@@ -17,7 +17,7 @@
 				this.parentArray.pull(this);
 			});
 
-			this.linkProps('sandbox','done',function(){
+			this.linkProps('_sandbox','done',function(){
 				return this.done;
 			});
 
